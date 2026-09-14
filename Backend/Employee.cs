@@ -34,7 +34,6 @@ public abstract class Employee
     {
         return $"{Id}\t {FirstName} {LastName}\n\t + " +
                $"Born date......:  {BornDate,20}\n\t + " +
-               $"Hire date......:  {HireDate,20}\n\t + " +
-               $"Salary.........:  {GetValueToPay(),20:C2}";
+               $"Hire date......:  {HireDate,20} ";       
     }
 }
