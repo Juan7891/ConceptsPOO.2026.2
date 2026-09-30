@@ -34,7 +34,6 @@ public class Date
     {
         get => _month;
         set => _month = ValidateMonth(value);
-
     }
     public int Day 
     {
@@ -42,12 +41,8 @@ public class Date
         set => _day = ValidateDay(value);
     }
 
-
     //Public Methods
-    public override string ToString()
-    {
-        return $"{Year:D4}/{Month:D2}/{Day:D2}";
-    }
+    public override string ToString() => $"{Year:D4}/{Month:D2}/{Day:D2}";
 
     //Private Methods
     private int ValidateYear(int year) 

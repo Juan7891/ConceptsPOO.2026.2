@@ -22,11 +22,8 @@ public class SalaryEmployee : Employee
     //public Methods
     public override decimal GetValueToPay() => _salary;
 
-    public override string ToString()
-    {
-        return $"{base.ToString()}\n\t" +
+    public override string ToString() => $"{base.ToString()}\n\t" +
                $" Salary.............:  {GetValueToPay(),20:C2}";
-    }
 
     //private Methods
     private decimal ValidateSalary(decimal salary) 

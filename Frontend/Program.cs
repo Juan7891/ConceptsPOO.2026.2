@@ -15,14 +15,21 @@ try
     var employee3 = new CommissionEmployee (1030, "Tatiana", "Rodriguez", new Date(1990, 10, 14), new Date(2024, 12, 10), true, 0.03f, 260000000);
     var employee4 = new HourlyEmployee     (1040, "Fabian", "Sandoval", new Date(1993, 12, 14), new Date(2025, 7, 10), true, 132.5f, 30000);
     var employee5 = new HourlyEmployee     (1050, "Cristina", "Alvarez", new Date(1998, 5, 25), new Date(2025, 6, 9), true, 90, 80000);
+    var employee6 = new BaseCommissionEmployee (1060, "Juan", "Ramirez", new Date(1993, 09, 14), new Date(2025, 6, 10), true, 0.0125f, 80000000, 600000);
 
-
-    var employees = new List<Employee> { employee1, employee2, employee3, employee4, employee5 };
+    var employees = new List<Employee> { employee1, employee2, employee3, employee4, employee5, employee6 };
+    decimal total = 0;
     foreach (var employee in employees) 
     {
-        Console.WriteLine(employee);
         Console.WriteLine("---------------------------------------");
+        Console.WriteLine(employee);
+        total += employee.GetValueToPay();
     }
+    
+    Console.WriteLine("=================================================");
+    Console.WriteLine($"TOTAL.........................:{total,20:C2}");
+    Console.WriteLine("=================================================");
+
 }
 catch (Exception ex)
 {

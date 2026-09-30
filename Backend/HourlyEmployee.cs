@@ -30,13 +30,10 @@ public class HourlyEmployee : Employee
     //Public Methods
     public override decimal GetValueToPay() => HourValue * (decimal)Workinghours;
   
-    public override string ToString()
-    {
-        return $"{base.ToString()}\n\t" +
+    public override string ToString() => $"{base.ToString()}\n\t" +
                $" Working hours..:    {Workinghours,20:N2}\n\t" +
                $" Hour value........:   {HourValue,20:C2}\n\t" +
                $" Salary............:   {GetValueToPay(),20:C2}";
-    }
 
     //Privatec Methods
     private decimal ValidateHourlValue(decimal hourValue)
