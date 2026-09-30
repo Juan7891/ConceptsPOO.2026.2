@@ -1,6 +1,6 @@
 ﻿namespace Backend;
 
-public abstract class Employee
+public abstract class Employee : IPay
 {
     //Constructors
     protected Employee(int id, string firstName, string lastName, Date bornDate, Date hireDate, bool isActive)
